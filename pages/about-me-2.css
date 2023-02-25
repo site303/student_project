@@ -1,0 +1,67 @@
+#line {
+    text-decoration: underline;
+}
+
+.brown {
+    color:brown;
+}
+.points {
+    border: dotted;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.cookie {
+    background: url("../pictures/cookie.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.cocoa {
+    margin-top: 6px;
+    margin-left: 6px;
+
+}
+
+.the-main {
+    margin-left: 20px;
+}
+
+.funny-username {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.funny-email {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.funny-year {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.funny-checkbox {
+    margin-top: 10px;
+
+}
+
+.funny-button {
+    margin-top: 10px;
+    font-size: 21px;
+    padding: 6px 6px;
+    border-radius: 20px;
+    border-color: rgb(116, 121, 121);
+}
+
+.wrapper {
+    height: 100%;
+    margin: 20px 80px;
+}

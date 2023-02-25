@@ -6,6 +6,22 @@ body {
     margin: 0;
 }
 
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* Раздел главная */
+
+.logo {
+    color: #EA5D21;
+}
+
+.innopolis {
+    -webkit-text-stroke: 1px #FFFFFF;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -57,19 +73,30 @@ body {
 .login-popup {
     position: absolute;
     z-index: 2;
-    bottom: 0;
-    left: 50%;
-    /* transform: translate(-50% -100%);  */
+    transform: translate(-50% -50%);
     box-sizing: border-box;
     width: 100%;
     max-width: 462px;
     min-height: 418px;
+    left: 24%;
+    top: 20%;  
     padding: 26px 28px 50px;
     border: 1px solid #213B7E;
     background-color: #FFFFFF;
     display: none;
-    margin: 232px -294px;
+
 }
+
+/* .popup-closer{
+    position: absolute;
+    top: -35px;
+    right: -25px;
+    border: 4px double #EA5D21;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    
+} */
 
 .login-heading {
     font-family: 'Roboto';
@@ -164,10 +191,20 @@ body {
     flex-grow: 1;
 }
 
-.welcome {
+.welcome,
+.welcome-map,
+.welcome-course {
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
+}
+
+.welcome-map,
+.welcome-course,
+.telephone,
+.address-map,
+.address-course {
+    margin-left: 176px;
 }
 
 .students {
@@ -207,6 +244,7 @@ h2 {
     height: 60px;
 }
 
+
 .copyright {
     font-style: normal;
     font-weight: 400;
@@ -223,15 +261,170 @@ h2 {
 
 }
 
+.intro-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside {}
+
+.note {
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    color: #646464;
+}
+
+
+/* Раздел Студенты */
+
+.content-students {
+    height: 100%;
+    margin: 30px auto;
+
+}
+
+.label-green{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color:#FFFFFF;
+    background-color: #3AA828;
+    padding: 3px 9px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    top: -330px;
+    left: 121px;
+}
+
+/* .student-name{
+    display: block;
+    text-align:center;
+} */
+
+
+.students-blue-box {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin: 20px 80px;  */
+    margin: 0 auto; 
+}
+
+.rubric {
+    margin: 20px auto;
+    /* position: relative;
+    transform: translate(0,0);
+    left: 10%; */
+    
+}
+
+.student {
+    padding-left: 50px;
+}
+
+/* раздел контакты курсы */
+
+.map {
+    margin: 10px 96px;
+}
+
+.video {
+    margin: 10px 176px;
+}
+
+.content-contacts,
+.content-courses {
+    padding: 30px;
+    flex: 1 1 auto;
+    margin: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.telephone {
+    text-decoration: underline;
+}
+
+/* Псевдоклассы */
+
+.paragraph::first-letter {
+    color: #EA5D21;
+    font-size: 50px;
+}
+
+.menu-nav:active {
+    color: #EA5D21;
+}
+
+.login-popup {
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.6);
+}
+
+.login-input:focus,
+.login-password:focus {
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.student-photo:hover {
+    color: aqua;
+}
 
 @media(max-width: 1200px) {
-    .students {
+
+    .students,
+    .video,
+    .map {
         max-width: 100%;
 
     }
 
-    .paragraph {
+    .paragraph,
+    .address-map {
         max-width: 100%;
+    }
+
+}
+
+@media(max-width: 1190px) {
+    .map {
+        width: 1000px;
+    }
+
+    .students-blue-box {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 1150px) {
+    .map {
+        width: 800px;
+    }
+
+    .content-students {
+        height: unset;
+    }
+}
+
+@media(max-width: 960px) {
+    .map {
+        margin: 10px 8px;
+    }
+
+    .welcome-map,
+    .telephone,
+    .address-map {
+        margin-left: 52px;
     }
 
 }
@@ -241,7 +434,31 @@ h2 {
         padding: 0 20px;
         width: auto;
     }
+
 }
+
+@media(max-width: 860px) {
+    .map {
+        margin-right: 586px;
+    }
+
+    .video {
+        margin: 10px 6px;
+    }
+
+    .welcome-course,
+    .address-course {
+        margin-left: 50px;
+    }
+}
+
+@media(max-width:850px) {
+
+    .map {
+        width: 492px;
+    }
+}
+
 
 
 @media(max-width:800px) {
@@ -258,7 +475,7 @@ h2 {
 
     .menu-nav {
         margin: -6px;
-        font-size: 28px;
+        font-size: 14px;
     }
 
     .copyright,
@@ -272,57 +489,73 @@ h2 {
 
     .logo {
         margin-top: 15px;
-        width: 56px;
+        width: 134px;
     }
+
 
     .login-button {
         margin-bottom: 15px;
-        font-size: 28px;
+        font-size: 14px;
         height: 60px;
         width: 190px;
     }
 
     .welcome {
-        font-size: 42px;
+        font-size: 28px;
         font-weight: bold;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: bold;
     }
 
-    .paragraph {
+    /* .paragraph {
         max-width: 100%;
-        font-size: 28px;
+        font-size: 18px;
+    } */
+}
+
+@media(max-width: 780px) {
+
+    .contacts,
+    .video {
+        margin: 10px 8px;
+    }
+}
+
+@media(max-width: 720px) {
+    .video {
+        width: 400px;
+        margin: 10px -8px;
     }
 }
 
 @media(max-width: 620px) {
     .login-button {
-        font-size: 36px;
-        height: 80px;
-        width: 220px;
+        font-size: 16px;
+        height: 61px;
+        width: 163px;
     }
 
     .menu-nav {
         margin: -6px;
-        font-size: 36px;
+        font-size: 16px;
     }
 
-    .welcome {
-        font-size: 48px;
+    /* .welcome {
+        font-size: 32px;
         font-weight: bold;
-    }
+    } */
 
     h2 {
-        font-size: 36px;
+        font-size: 22px;
         font-weight: bold;
     }
 
     .paragraph {
         max-width: 100%;
-        font-size: 34px;
+        font-size: 16px;
 
     }
 
@@ -335,33 +568,33 @@ h2 {
 
 @media(max-width: 520px) {
     .menu-nav {
-        font-size: 39px;
+        font-size: 18px;
     }
 
     .login-button {
-        font-size: 39px;
-        height: 83px;
-        width: 223px;
+        font-size: 18px;
+        height: 63px;
+        width: 186px;
     }
 
     .logo {
         margin-top: 18px;
-        width: 59px;
+        width: 120px;
     }
 
-    .welcome {
-        font-size: 51px;
+    /* .welcome {
+        font-size: 40px;
 
-    }
+    } */
 
-    h2 {
-        font-size: 39px;
+    /* h2 {
+        font-size: 20px;
         font-weight: bold;
-    }
+    } */
 
-    .paragraph {
-        font-size: 37px;
-    }
+    /* .paragraph {
+        font-size: 14px;
+    } */
 
     .copyright,
     .grey-label {
